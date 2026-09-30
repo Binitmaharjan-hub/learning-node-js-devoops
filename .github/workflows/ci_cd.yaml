@@ -10,7 +10,7 @@ jobs:
     runs-on: self-hosted
     environment: test
     env:
-      IMAGE_NAME: binitmaharjan/learning-java
+      IMAGE_NAME: binitmaharjan/learning-node_js
 
     steps:
       - name: Checkout code
