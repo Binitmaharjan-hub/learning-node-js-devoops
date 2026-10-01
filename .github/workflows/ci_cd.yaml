@@ -42,6 +42,17 @@ jobs:
             ${{ env.IMAGE_NAME }}:latest
             ${{ env.IMAGE_NAME }}:${{ github.sha }}
             ${{ env.IMAGE_NAME }}:${{ github.run_number }}
+  
+  deploy:
+    name: deploy nodejs application
+    runs-on: slef-hosted
+    needs: build
+    steps:
+      - name: deploy with docker compose
+        run: docker compose up -- build -d
+
+      - name: verify deployment
+        run: sleep 10 && curl -v http://localhost:80 
       
 
     
