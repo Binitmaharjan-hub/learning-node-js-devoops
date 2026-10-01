@@ -45,7 +45,7 @@ jobs:
   
   deploy:
     name: deploy nodejs application
-    runs-on: slef-hosted
+    runs-on: self-hosted
     needs: build
     steps:
       - name: deploy with docker compose
