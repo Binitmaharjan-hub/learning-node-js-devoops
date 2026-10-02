@@ -7,7 +7,7 @@ on:
 jobs:
   build:
     name: build nodejs application
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     environment: test
     env:
       IMAGE_NAME: binitmaharjan/learning-node_js
@@ -45,7 +45,7 @@ jobs:
   
   deploy:
     name: deploy nodejs application
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     needs: build
     steps:
       - name: deploy with docker compose
