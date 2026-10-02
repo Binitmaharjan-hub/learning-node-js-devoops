@@ -1,48 +1,34 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Learning Node.js</title> 
-    <link rel="stylesheet" href="styles.css"> 
-</head> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
  
-<body> 
+    <div class="container">
+        <h1>Student Dashboard</h1>
+        <p class="subtitle">Students loaded from FastAPI + PostgreSQL</p>
  
-    <div class="container"> 
+        <div id="status">Loading students...</div>
  
-        <img src="nodejs.svg" alt="Node.js"> 
+        <table id="students-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                </tr>
+            </thead>
  
-        <h1>Learning Node.js is Fun! 🚀</h1> 
+            <tbody id="students-body">
+            </tbody>
+        </table>
+    </div>
  
-        <p> 
-            Welcome to my first Node.js CI/CD application. 
-        </p> 
- 
-        <div class="cards"> 
- 
-            <div class="card"> 
-                <h2>⚡ Fast</h2> 
-                <p>Node.js is built on the V8 JavaScript engine.</p> 
-            </div> 
- 
-            <div class="card"> 
-                <h2>🌐 Web</h2> 
-                <p>Build APIs and web applications using JavaScript.</p> 
-            </div> 
- 
-            <div class="card"> 
-                <h2>🚀 DevOps</h2> 
-                <p>This application will be automatically deployed.</p> 
-            </div> 
- 
-        </div> 
- 
-        <p class="footer"> 
-            Built with Node.js + Express + Docker + GitHub Actions 
-        </p> 
- 
-    </div> 
- 
-</body> 
+    <script src="/app.js"></script>
+</body>
 </html>
